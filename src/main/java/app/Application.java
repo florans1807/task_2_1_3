@@ -11,10 +11,14 @@ public class Application {
         ApplicationContext applicationContext =
                 new AnnotationConfigApplicationContext(AppConfig.class);
         for (int i = 0; i < 5; i++) {
-            AnimalsCage bean =
+            AnimalsCage bean1 =
                     applicationContext.getBean(AnimalsCage.class);
-            bean.whatAnimalSay();
+            bean1.whatAnimalSay();
         }
+
+        AnimalsCage bean2 =
+                applicationContext.getBean(AnimalsCage.class);
+        bean2.whatAnimalSay();
     }
 
 }
